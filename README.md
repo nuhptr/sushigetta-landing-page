@@ -9,3 +9,5 @@ Build landing page for sushi ordering using HTML and CSS with bem naming convent
 1. npm create vite@latest
 2. choose vanilla
 3. start coding
+
+don't forget to follow bem naming convention
