@@ -1,0 +1,202 @@
+.trending {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    & .trending-sushi,
+    & .trending-drinks {
+        width: 100%;
+        min-height: 640px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    & .trending-sushi {
+        @media (width <= 1024px) {
+            flex-direction: column;
+        }
+
+        & .trending__image {
+            background-image: url("../../assets/images/japanese_sushi.png");
+        }
+    }
+
+    & .trending-drinks {
+        @media (width <= 1024px) {
+            flex-direction: column-reverse;
+        }
+
+        & .trending__image {
+            background-image: url("../../assets/images/japanese_drinks.png");
+        }
+    }
+
+    & .trending__content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 32px 64px;
+
+        @media (width <= 550px) {
+            padding: 32px;
+        }
+    }
+
+    & .trending__list {
+        list-style: none;
+
+        flex-wrap: wrap;
+        gap: 20px;
+
+        & li {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 12px;
+
+            min-width: 210px;
+        }
+
+        & p {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: var(--plus-jakarta-sans);
+
+            color: var(--secondary-color);
+        }
+    }
+
+    & .trending__icon {
+        width: 24px;
+        height: 24px;
+
+        background-color: var(--primary-color);
+        border-radius: 100%;
+
+        & img {
+            width: 50%;
+            height: 50%;
+            object-fit: contain;
+        }
+    }
+
+    & .trending__image {
+        flex: 1;
+
+        position: relative;
+        padding: 32px 64px;
+
+        background-color: var(--color-white);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        @media (width <= 1024px) {
+            width: 100%;
+            background-size: cover;
+        }
+
+        & img {
+            width: 254px;
+            height: 260px;
+            object-fit: contain;
+
+            @media (width <= 550px) {
+                width: 70%;
+                height: 70%;
+            }
+        }
+    }
+
+    & .trending__discover {
+        position: absolute;
+        top: 44%;
+        left: 44%;
+
+        z-index: 1;
+
+        width: 160px;
+        height: 160px;
+
+        background-color: var(--secondary-color);
+        border-radius: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (width <= 1024px) {
+            display: none;
+        }
+
+        & p {
+            color: #fff;
+            text-transform: uppercase;
+
+            font-size: 18px;
+            font-weight: 500;
+            font-family: var(--plus-jakarta-sans);
+        }
+    }
+
+    /* Arrows */
+    & .trending__arrow {
+        position: absolute;
+        z-index: 1;
+
+        @media (width <= 1024px) {
+            display: none;
+        }
+
+        & img {
+            object-fit: contain;
+        }
+
+        &.trending__arrow-left {
+            left: -2.5px;
+            top: 12%;
+
+            & img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        &.trending__arrow-top {
+            top: -10.5px;
+            left: 12%;
+
+            & img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        &.trending__arrow-bottom {
+            bottom: -6.5px;
+            right: 12%;
+
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &.trending__arrow-right {
+            right: -2.5px;
+            bottom: 12%;
+
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

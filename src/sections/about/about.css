@@ -1,0 +1,134 @@
+.about-us {
+    display: flex;
+    min-height: 720px;
+    overflow: hidden;
+
+    @media (width <= 1024px) {
+        flex-direction: column;
+    }
+
+    & .about-us__image {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background-color: var(--color-white);
+
+        position: relative;
+
+        @media (width <= 1024px) {
+            flex-direction: row;
+        }
+
+        @media (width <= 750px) {
+            flex-direction: column;
+        }
+
+        & div {
+            padding: 32px 64px;
+
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @media (width <= 550px) {
+                padding: 32px;
+            }
+        }
+
+        & .about-us__image-sushi3 {
+            border-bottom: 8px solid var(--color-creamson);
+            background-image: url("../../assets/images/about_bg1.png");
+
+            @media (width <= 1024px) {
+                border-bottom: none;
+                border-right: 8px solid var(--color-creamson);
+            }
+
+            @media (width <= 750px) {
+                border-bottom: 8px solid var(--color-creamson);
+                border-right: none;
+            }
+
+            & img {
+                width: 225px;
+                height: 200px;
+            }
+        }
+
+        & .about-us__image-sushi2 {
+            background-image: url("../../assets/images/about_bg2.png");
+
+            & img {
+                width: 240px;
+                height: 160px;
+            }
+        }
+
+        @media (width <= 550px) {
+            & .about-us__image-sushi2 img,
+            & .about-us__image-sushi3 img {
+                width: 50%;
+                height: 160px;
+                object-fit: contain;
+            }
+        }
+
+        & .about-us__button {
+            position: absolute;
+            right: 0;
+
+            padding: 12px 32px;
+            min-height: 64px;
+
+            background-color: var(--secondary-color);
+            border-radius: 32px 0 0 32px;
+            border: 0;
+            outline: 0;
+
+            color: var(--color-white);
+            font-family: var(--plus-jakarta-sans);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+
+            cursor: pointer;
+
+            @media (width <= 1024px) {
+                display: none;
+            }
+
+            @media (width <= 750px) {
+                display: block;
+                top: 47%;
+            }
+
+            @media (width <= 550px) {
+                top: 44%;
+            }
+
+            & img {
+                object-fit: contain;
+                margin-left: 32px;
+            }
+        }
+    }
+
+    & .about-us__content {
+        padding: 64px;
+
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        @media (width <= 550px) {
+            padding: 32px;
+        }
+    }
+}
