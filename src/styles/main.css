@@ -1,0 +1,11 @@
+@import "./tokens.css";
+@import "./base.css";
+@import "./utilities.css";
+
+@import "../sections/header/header.css";
+@import "../sections/hero/hero.css";
+@import "../sections/about/about.css";
+@import "../sections/popular/popular.css";
+@import "../sections/trending/trending.css";
+@import "../sections/subscribe/subscribe.css";
+@import "../sections/footer/footer.css";
